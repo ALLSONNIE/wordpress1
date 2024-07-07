@@ -30,12 +30,13 @@ get_header(); ?>
 			while (have_posts()):
 				the_post(); ?>
 				<h2 class="post-title"><?php the_title(); ?></h2>
-				<div>
+				<p></p>
+				<div class="">
 					<?php the_content(); ?>
-                    <p> <?php echo get_field("descripcion"); ?> </p>
+                    <p class=""> <?php echo get_field("descripcion"); ?> </p>
                     <p> <?php echo get_field("url-proyecto"); ?> </p>
 					<?php $foto = get_field('imagen'); ?>
-					<img class="foto-persona" src="<?php echo $foto['url'] ?>" alt="<?php echo $foto['alt'] ?>">
+					<img class="foto-proyecto" src="<?php echo $foto['url'] ?>" alt="<?php echo $foto['alt'] ?>">
 				</div>
 			<?php endwhile;
 		endif; ?>

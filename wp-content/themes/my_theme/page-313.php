@@ -38,6 +38,8 @@ get_header(); ?>
 		$query = new WP_Query($args);
 		?>
 		<div>
+			<h1>Proyectos</h1>
+			<p></p>
 			<ul>
 				<?php
 					while ( $query-> have_posts() ){
@@ -48,8 +50,10 @@ get_header(); ?>
 							<a href="<?php echo get_the_permalink(); ?>">
 								<?php echo get_the_post_thumbnail($post->ID); ?>
 								<div>
+									<p></p>
 									<h2><?php echo get_the_title(); ?></h2>
 								</div>
+								<p></p>
 							</a>
 						</li>
 						<?php
